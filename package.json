@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "parcel ./*.html",
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://hagerdakroury.github.io/edam2json-demo/",
+    "deploy": "gh-pages -d dist"
+},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HagerDakroury/edam2json-demo.git"
